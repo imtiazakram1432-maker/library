@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #d6f1f9;
+}
+
+/* Header */
+.header {
+    background:rgb(184, 248, 198);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 45% ;
+    font-size: 22px;
+    font-weight: bold;
+    color: #0488fb;
+}
+
+.logo span {
+    color: #333;
+}
+
+nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav .btn {
+    background: #1e88e5;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 40px;
+    background: rgb(184, 248, 198);
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 30px;
+}
+/* Basic styles for the navbar */
+        .nav1 {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav1 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav1 ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .nav1 ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .nav1 ul li a:hover {
+            text-decoration: underline;
+        }
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #fafafa;
+    padding: 20px;
+    width: 250px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Books */
+.books h2 {
+    margin-bottom: 20px;
+}
+.book-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.book {
+    width: 160px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: transform 0.1 ease, box-shadow 0.1s ease;
+}
+
+.book img {
+    width: 160px;      /* same width for all images */
+    height: 220px;     /* same height for all images */
+    object-fit: cover; /* keeps aspect ratio & crops neatly */
+    border-radius: 6px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+/* Hover effect */
+.book:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.book:hover {
+    color: #ff6600;
+}
+
+.book p {
+    margin-top: 8px;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .book img {
+        width: 120px;
+        height: 180px;
+    }
+
+    .book-list {
+        gap: 12px;
+    }
+
+    .book p {
+        font-size: 14px;
+    }
+}
+@media (max-width: 900px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .book img {
+        width: 140px;
+        height: 210px;
+    }
+
+    .book-list {
+        gap: 16px;
+    }
+}
+@media (min-width: 1200px) {
+    .book img {
+        width: 180px;
+        height: 260px;
+    }
+
+    .book-list {
+        gap: 25px;
+    }
+}
+
+

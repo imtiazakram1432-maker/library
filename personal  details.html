@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Membership</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.personal.css">
+</head>
+<body>
+
+<form id="membershipForm" onsubmit="return validateForm()">
+    <h1>Library Membership Registration</h1>
+
+    <section>
+        <h2>Personal Information</h2>
+
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter full name">
+        <small class="error" id="nameError"></small>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter email">
+        <small class="error" id="emailError"></small>
+
+        <label>Phone</label>
+        <input type="text" id="phone" placeholder="Enter phone number">
+        <small class="error" id="phoneError"></small>
+
+        <label>Date of Birth</label>
+        <input type="date" id="dob">
+
+        <label>Gender</label>
+        <div class="radio-group">
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+        </div>
+
+        <label>Address</label>
+        <textarea id="address" placeholder="Enter address"></textarea>
+
+        <button type="submit">Register</button>
+    </section>
+</form>
+
+<script src="js.personal.js"></script>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+
+    let nameError = document.getElementById("nameError");
+    let emailError = document.getElementById("emailError");
+    let phoneError = document.getElementById("phoneError");
+
+    nameError.textContent = "";
+    emailError.textContent = "";
+    phoneError.textContent = "";
+
+    let isValid = true;
+
+    if (name === "") {
+        nameError.textContent = "Name is required";
+        isValid = false;
+    }
+
+    if (email === "") {
+        emailError.textContent = "Email is required";
+        isValid = false;
+    } else if (!email.includes("@")) {
+        emailError.textContent = "Enter a valid email";
+        isValid = false;
+    }
+
+    if (phone === "") {
+        phoneError.textContent = "Phone number is required";
+        isValid = false;
+    } else if (phone.length < 10) {
+        phoneError.textContent = "Phone must be at least 10 digits";
+        isValid = false;
+    }
+
+    if (isValid) {
+        window.location.href = "additional.informational.html";
+    }
+
+    return false; // prevent default submit
+}
+</script>
+
+</body>
+</html>
