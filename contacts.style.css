@@ -78,4 +78,12 @@ button:hover {
     body {
         padding: 20px;
     }
+    /* tablets (min-width : 768px and max-width :1024px)*/
+    @media only screen and (min-width : 768px)and (max-width:1024) {
+        /* styles for tablets */
+    }
+    /* desktops (min-width: 1024px)*/
+    @media only screen and (min-width:1024px) {
+        /* style for desktops*/
+    }
 }
