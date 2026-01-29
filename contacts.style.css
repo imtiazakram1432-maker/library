@@ -56,8 +56,6 @@ input, select {
 }
 
 button {
-    word-spacing: 25px;
-    letter-spacing: 25px;
     text-transform: unset;
     margin-top: 20px;
     width: 100%;
@@ -98,3 +96,4 @@ button:hover {
         background-color: #fff;
     }
 }
+
