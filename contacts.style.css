@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
@@ -18,13 +19,13 @@ form {
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
+
 .error {
     color: rgb(7, 237, 122);
     font-size: 16px;
-    display:flex;
+    display: flex;
     margin-bottom: 10px;
 }
-
 
 h1 {
     text-align: center;
@@ -73,28 +74,27 @@ button:hover {
     background: #0056b3;
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 600px) {
     body {
         padding: 20px;
     }
-    /* tablets (min-width : 768px and max-width :1024px)*/
-    @media only screen and (min-width : 768px)and (max-width:1024) {
-        /* styles for tablets */
-        body{
-            padding:60px;
-            margin : auto;
-            background-color:#fff;
-    }
-    /* desktops (min-width: 1024px)*/
-    @media only screen and (min-width:1024px) {
-        /* style for desktops*/
-        body{
-            padding:60px;
-            margin : auto;
-            background-color:#fff;
-        }
-            
+}
+
+/* Tablets: 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        padding: 60px;
+        margin: auto;
+        background-color: #fff;
     }
 }
 
+/* Desktops: 1024px and above */
+@media (min-width: 1024px) {
+    body {
+        padding: 60px;
+        margin: auto;
+        background-color: #fff;
+    }
+}
